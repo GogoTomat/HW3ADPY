@@ -1,14 +1,11 @@
+def flat_generator(nested_list): 
+    for a in sum(nested_list,[]):
+        yield a
+
 nested_list = [
-    ['a', 'b', 'c'],
-    ['d', 'e', 'f'],
-    [1, 2, None],
+	['a', 'b', 'c'],
+	['d', 'e', 'f'],
+	['g', 'h', 'i'],
 ]
-
-
-def generator(a):
-    flatten = lambda x: [item for nested_list in x for item in nested_list]
-    yield flatten
-
-
-for item in generator(nested_list):
-    print(item)
+for item in  flat_generator(nested_list):
+	print(item)
